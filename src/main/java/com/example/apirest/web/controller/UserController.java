@@ -31,4 +31,14 @@ public class UserController {
     public void addUser(@RequestBody User u){
         dao.save(u);
     }
+
+    @DeleteMapping(value="/Users/{id}")
+    public void deleteUser(@PathVariable int id){
+        dao.delete(id);
+    }
+
+    @PutMapping(value="/Users")
+    public void updateUser(@RequestBody User u){
+        dao.update(u);
+    }
 }

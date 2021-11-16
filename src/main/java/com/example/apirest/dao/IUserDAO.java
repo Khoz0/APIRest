@@ -8,4 +8,6 @@ public interface IUserDAO {
     List<User> findAll();
     User findById(int id);
     void save(User user);
+    void delete(int id);
+    void update(User user);
 }
